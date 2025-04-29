@@ -1,7 +1,7 @@
 
 import React from "react";
 import ScrollReveal from "../ScrollReveal";
-import { BatteryCharging, Calendar, MapPin } from "lucide-react";
+import { BatteryCharging, Calendar, MapPin, Code, Terminal, Database } from "lucide-react";
 
 interface ExperienceItem {
   id: number;
@@ -10,33 +10,46 @@ interface ExperienceItem {
   location: string;
   period: string;
   description: string;
+  icon: React.ReactNode;
 }
 
 const Experience: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       id: 1,
-      role: "Lead Battery Systems Engineer",
-      company: "TechVolt Systems",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      description: "Leading the development of next-generation battery management systems for electric vehicles. Optimized algorithms resulting in 15% increase in battery lifespan and 20% improvement in charging efficiency."
+      role: "Application & Software Developer",
+      company: "LXInstruments GmbH",
+      location: "Germany",
+      period: "Mar 2024 - Oct 2024",
+      description: "Built modular C# WPF diagnostic platform, improving UI responsiveness by 30%. Integrated SQL battery databank with 40% faster queries. Automated KPI dashboard via REST API and mentored interns on C# unit testing.",
+      icon: <Code className="w-16 h-16 text-cyber-blue" />
     },
     {
       id: 2,
-      role: "Senior Software Developer",
-      company: "EnergyCore Solutions",
-      location: "Boston, MA",
-      period: "2019 - 2022",
-      description: "Architected and implemented software for battery analysis and optimization. Created machine learning models for predictive maintenance that reduced failure rates by 30%. Designed real-time monitoring dashboards for battery performance."
+      role: "Master Thesis Researcher",
+      company: "State of Health Estimation of Li-ion Batteries using EIS",
+      location: "Germany",
+      period: "Aug 2023 - Feb 2024",
+      description: "Developed MATLAB/Simulink algorithms achieving ±5% SoH accuracy (R² = 0.92). Processed 10k impedance profiles via SQL and validated model across 120 cells, identifying 18% as safe for second life reuse.",
+      icon: <Terminal className="w-16 h-16 text-cyber-blue" />
     },
     {
       id: 3,
-      role: "Battery Research Engineer",
-      company: "PowerTech Labs",
-      location: "Austin, TX",
-      period: "2016 - 2019",
-      description: "Conducted research on advanced battery materials and optimization techniques. Developed simulation software for testing battery performance under various conditions. Published 5 research papers in leading energy journals."
+      role: "Battery Test Intern",
+      company: "LXInstruments GmbH",
+      location: "Germany",
+      period: "Apr 2023 - Jul 2023",
+      description: "Scripted C# PCAN interfaces for real-time BMU data, tripling signal resolution. Automated test sequences, increasing throughput by 15%. Implemented safety watchdog preventing cell damage during 200+ cycles.",
+      icon: <BatteryCharging className="w-16 h-16 text-cyber-blue" />
+    },
+    {
+      id: 4,
+      role: "Development Engineer Intern",
+      company: "Wacker Neuson Produktion GmbH & Co. KG",
+      location: "Germany",
+      period: "May 2022 - Oct 2022",
+      description: "Analyzed battery logs and created MATLAB KPI extractor with 15% improved accuracy. Optimized peak detection functions, reducing analysis runtimes by 30%. Prepared technical reports for management audits.",
+      icon: <Database className="w-16 h-16 text-cyber-blue" />
     }
   ];
 
@@ -85,7 +98,7 @@ const Experience: React.FC = () => {
                       <p className="text-cyber-gray leading-relaxed">{exp.description}</p>
                       
                       <div className="absolute -bottom-3 -right-3 opacity-10">
-                        <BatteryCharging className="w-16 h-16 text-cyber-blue" />
+                        {exp.icon}
                       </div>
                     </div>
                   </div>

@@ -5,33 +5,34 @@ import {
   BatteryCharging, 
   Code, 
   Database, 
-  LineChart, 
-  Layers, 
-  Cpu
+  Cpu, 
+  GitBranch, 
+  Terminal,
+  HardDrive
 } from "lucide-react";
 
 interface Skill {
   name: string;
   level: number;
   icon: JSX.Element;
-  category: "battery" | "software" | "data";
+  category: "battery" | "software" | "tools";
 }
 
 const Skills: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<"all" | "battery" | "software" | "data">("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | "battery" | "software" | "tools">("all");
   const [animated, setAnimated] = useState(false);
 
   const skills: Skill[] = [
-    { name: "Battery Management Systems", level: 95, icon: <BatteryCharging />, category: "battery" },
-    { name: "Cell Chemistry Analysis", level: 90, icon: <Layers />, category: "battery" },
-    { name: "Thermal Management", level: 85, icon: <BatteryCharging />, category: "battery" },
-    { name: "Python", level: 90, icon: <Code />, category: "software" },
-    { name: "C/C++", level: 85, icon: <Code />, category: "software" },
-    { name: "React", level: 80, icon: <Code />, category: "software" },
-    { name: "Embedded Systems", level: 90, icon: <Cpu />, category: "software" },
-    { name: "Data Analysis", level: 85, icon: <LineChart />, category: "data" },
-    { name: "SQL/NoSQL", level: 80, icon: <Database />, category: "data" },
-    { name: "Machine Learning", level: 75, icon: <LineChart />, category: "data" },
+    { name: "Battery Management Systems", level: 90, icon: <BatteryCharging />, category: "battery" },
+    { name: "State of Health Estimation", level: 85, icon: <BatteryCharging />, category: "battery" },
+    { name: "EIS & Diagnostics", level: 88, icon: <BatteryCharging />, category: "battery" },
+    { name: "C#/.NET/WPF", level: 95, icon: <Code />, category: "software" },
+    { name: "MATLAB/Simulink", level: 92, icon: <Terminal />, category: "software" },
+    { name: "Python", level: 85, icon: <Code />, category: "software" },
+    { name: "SQL", level: 80, icon: <Database />, category: "software" },
+    { name: "Git/Version Control", level: 88, icon: <GitBranch />, category: "tools" },
+    { name: "CI/CD (Jenkins/Azure)", level: 82, icon: <HardDrive />, category: "tools" },
+    { name: "CAN/PCAN", level: 85, icon: <Cpu />, category: "tools" },
   ];
 
   // Filter skills based on active filter
@@ -52,8 +53,8 @@ const Skills: React.FC = () => {
     <section id="skills" className="py-20 bg-cyber-dark/50 relative">
       <div className="container mx-auto px-4">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-display mb-2 text-gradient text-center">MY SKILLS</h2>
-          <p className="text-cyber-gray text-center mb-12 font-mono">Technical proficiencies & expertise</p>
+          <h2 className="text-3xl md:text-4xl font-display mb-2 text-gradient text-center">TECHNICAL SKILLS</h2>
+          <p className="text-cyber-gray text-center mb-12 font-mono">Battery software & embedded expertise</p>
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
@@ -61,8 +62,8 @@ const Skills: React.FC = () => {
             {[
               { id: "all", label: "All Skills" },
               { id: "battery", label: "Battery Tech" },
-              { id: "software", label: "Software Dev" },
-              { id: "data", label: "Data Science" }
+              { id: "software", label: "Software" },
+              { id: "tools", label: "Tools & Protocols" }
             ].map((filter) => (
               <button
                 key={filter.id}

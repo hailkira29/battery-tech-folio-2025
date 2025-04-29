@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import ScrollReveal from "../ScrollReveal";
-import { Send, Mail, Phone, MapPin } from "lucide-react";
+import { Send, Mail, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact: React.FC = () => {
@@ -34,9 +34,8 @@ const Contact: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: <Mail className="w-5 h-5 text-cyber-blue" />, label: "Email", value: "contact@batteryfolio.com" },
-    { icon: <Phone className="w-5 h-5 text-cyber-blue" />, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: <MapPin className="w-5 h-5 text-cyber-blue" />, label: "Location", value: "San Francisco, CA" },
+    { icon: <Mail className="w-5 h-5 text-cyber-blue" />, label: "Email", value: "Contact via form" },
+    { icon: <MapPin className="w-5 h-5 text-cyber-blue" />, label: "Location", value: "Stuttgart, Germany" },
   ];
 
   return (
@@ -52,7 +51,7 @@ const Contact: React.FC = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-display text-white mb-4">Let's Connect</h3>
               <p className="text-cyber-gray mb-8">
-                Interested in working together or have questions about battery technology? Feel free to reach out through the form or using my contact information.
+                Interested in discussing battery technology, software development, or potential collaborations? I'm always open to connecting with other professionals in the field. Feel free to reach out using the contact form.
               </p>
               
               <div className="space-y-6">
@@ -68,19 +67,19 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="cyber-panel p-6 rounded-lg mt-12">
-                <h4 className="text-lg font-display text-white mb-3">Working Hours</h4>
+                <h4 className="text-lg font-display text-white mb-3">Areas of Expertise</h4>
                 <div className="space-y-2 font-mono">
                   <div className="flex justify-between">
-                    <span className="text-cyber-gray">Monday - Friday:</span>
-                    <span className="text-cyber-blue">9:00 AM - 5:00 PM</span>
+                    <span className="text-cyber-gray">Battery Diagnostics:</span>
+                    <span className="text-cyber-blue">EIS, SOH Estimation</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-cyber-gray">Saturday:</span>
-                    <span className="text-cyber-blue">By appointment</span>
+                    <span className="text-cyber-gray">Software Development:</span>
+                    <span className="text-cyber-blue">C#/.NET, MATLAB</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-cyber-gray">Sunday:</span>
-                    <span className="text-cyber-blue">Closed</span>
+                    <span className="text-cyber-gray">Data Analysis:</span>
+                    <span className="text-cyber-blue">SQL, Python</span>
                   </div>
                 </div>
               </div>

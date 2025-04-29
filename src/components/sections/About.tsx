@@ -1,7 +1,7 @@
 
 import React from "react";
 import ScrollReveal from "../ScrollReveal";
-import { BatteryMedium, Cpu, GitBranch, Globe, Server } from "lucide-react";
+import { BatteryCharging, Cpu, GitBranch, Terminal, Database, Code } from "lucide-react";
 
 const About: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-display mb-2 text-gradient text-center">ABOUT ME</h2>
-          <p className="text-cyber-gray text-center mb-12 font-mono">The human behind the code</p>
+          <p className="text-cyber-gray text-center mb-12 font-mono">Battery Software & Embedded Engineer</p>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -26,7 +26,7 @@ const About: React.FC = () => {
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
-                  <div className="ml-2 text-xs text-cyber-gray font-mono">developer.jpg</div>
+                  <div className="ml-2 text-xs text-cyber-gray font-mono">hemant.profile</div>
                 </div>
               </div>
             </div>
@@ -35,18 +35,18 @@ const About: React.FC = () => {
           <ScrollReveal delay={400} direction="right">
             <div className="space-y-6">
               <p className="text-lg text-cyber-gray leading-relaxed">
-                I'm a passionate software developer with extensive expertise in battery technology. My work bridges the gap between cutting-edge software development and advanced battery systems, creating innovative solutions for energy storage challenges.
+                I'm Hemant Hedaoo, a specialized Battery Software & Embedded Engineer based in Stuttgart, Germany. My expertise bridges the gap between advanced software development and battery systems, creating diagnostic solutions for energy storage technologies.
               </p>
               <p className="text-lg text-cyber-gray leading-relaxed">
-                With <span className="text-cyber-blue">7+ years</span> of experience in battery management systems, I specialize in optimizing performance, extending battery life, and enhancing safety through intelligent software solutions.
+                With a <span className="text-cyber-blue">Master's in Renewable Energy & E-Mobility</span>, I specialize in developing C#/.NET applications for battery diagnostics, implementing precise state estimation algorithms, and optimizing testing processes for battery management systems.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
-                  { icon: <BatteryMedium className="h-8 w-8 text-cyber-blue mb-2" />, label: "Battery Systems" },
-                  { icon: <Cpu className="h-8 w-8 text-cyber-blue mb-2" />, label: "Embedded Systems" },
-                  { icon: <GitBranch className="h-8 w-8 text-cyber-blue mb-2" />, label: "Software Development" },
-                  { icon: <Server className="h-8 w-8 text-cyber-blue mb-2" />, label: "Data Analysis" }
+                  { icon: <BatteryCharging className="h-8 w-8 text-cyber-blue mb-2" />, label: "Battery Diagnostics" },
+                  { icon: <Code className="h-8 w-8 text-cyber-blue mb-2" />, label: "C#/.NET/WPF" },
+                  { icon: <Terminal className="h-8 w-8 text-cyber-blue mb-2" />, label: "MATLAB/Simulink" },
+                  { icon: <Database className="h-8 w-8 text-cyber-blue mb-2" />, label: "SQL & Data Analysis" }
                 ].map((item, index) => (
                   <div key={index} className="cyber-panel rounded-lg p-4 flex flex-col items-center text-center">
                     {item.icon}
