@@ -1,6 +1,6 @@
 
 import React from "react";
-import { BatteryFull, Circuit, Cpu, Zap } from "lucide-react";
+import { BatteryFull, Cpu, Zap, CircuitBoard } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               <span className="text-cyber-gray text-xs font-mono">SYSTEMS</span>
             </div>
             <div className="flex flex-col items-center">
-              <Circuit className="w-5 h-5 text-cyber-blue mb-2" />
+              <CircuitBoard className="w-5 h-5 text-cyber-blue mb-2" />
               <span className="text-cyber-gray text-xs font-mono">CIRCUITS</span>
             </div>
             <div className="flex flex-col items-center">
