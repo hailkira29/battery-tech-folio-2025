@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 
-import Preloader from "./components/Preloader";    // ← or "./components/Preloader"
+import Preloader from "@/components/Preloader";    // ← or "./components/Preloader"
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
