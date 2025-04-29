@@ -6,7 +6,14 @@ import ScrollReveal from "../ScrollReveal";
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState("");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const words = ["Developer", "Battery Engineer", "Tech Innovator", "Energy Specialist", "Circuit Designer"];
+  const words = [
+    "Application Developer", 
+    "Software Engineer", 
+    "Battery Specialist", 
+    "C# Developer",
+    "Diagnostics Expert",
+    "Energy Innovator"
+  ];
   const typingSpeed = 100;
   const erasingSpeed = 50;
   const delayBetweenWords = 1500;

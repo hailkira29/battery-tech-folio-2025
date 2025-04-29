@@ -1,7 +1,7 @@
 
 import React from "react";
 import ScrollReveal from "../ScrollReveal";
-import { BatteryCharging, Cpu, GitBranch, Terminal, Database, Code } from "lucide-react";
+import { BatteryCharging, Cpu, Code, Terminal, Database, GitBranch } from "lucide-react";
 
 const About: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-display mb-2 text-gradient text-center">ABOUT ME</h2>
-          <p className="text-cyber-gray text-center mb-12 font-mono">Battery Software & Embedded Engineer</p>
+          <p className="text-cyber-gray text-center mb-12 font-mono">Application & Software Developer | Battery Specialist</p>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -35,10 +35,10 @@ const About: React.FC = () => {
           <ScrollReveal delay={400} direction="right">
             <div className="space-y-6">
               <p className="text-lg text-cyber-gray leading-relaxed">
-                I'm Hemant Hedaoo, a specialized Battery Software & Embedded Engineer based in Stuttgart, Germany. My expertise bridges the gap between advanced software development and battery systems, creating diagnostic solutions for energy storage technologies.
+                I'm Hemant Hedaoo, an Application & Software Developer with specialized expertise in battery systems based in Stuttgart, Germany. I create innovative diagnostic solutions that bridge advanced software development with battery technology.
               </p>
               <p className="text-lg text-cyber-gray leading-relaxed">
-                With a <span className="text-cyber-blue">Master's in Renewable Energy & E-Mobility</span>, I specialize in developing C#/.NET applications for battery diagnostics, implementing precise state estimation algorithms, and optimizing testing processes for battery management systems.
+                With a <span className="text-cyber-blue">Master's in Renewable Energy & E-Mobility</span>, I develop C#/.NET/WPF applications for battery diagnostics, implement precise state estimation algorithms, and optimize testing processes for battery management systems.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8">
