@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				cyber: {
+					dark: '#1A1F2C',
+					blue: '#1EAEDB',
+					purple: '#8B5CF6',
+					light: '#F1F0FB',
+					gray: '#8E9196'
 				}
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Orbitron', 'sans-serif'],
+				mono: ['JetBrains Mono', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,45 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'battery-charge': {
+					'0%': { width: '0%', backgroundColor: '#ff4d4d' },
+					'50%': { backgroundColor: '#ffad4d' },
+					'100%': { width: '100%', backgroundColor: '#4caf50' }
+				},
+				'text-shimmer': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'100%': { backgroundPosition: '100% 50%' }
+				},
+				'circuit-flow': {
+					'0%': { strokeDashoffset: '1000' },
+					'100%': { strokeDashoffset: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse 3s infinite ease-in-out',
+				'float': 'float 6s infinite ease-in-out',
+				'battery-charge': 'battery-charge 2s forwards cubic-bezier(0.4, 0, 0.2, 1)',
+				'text-shimmer': 'text-shimmer 2s infinite linear',
+				'circuit-flow': 'circuit-flow 3s infinite linear'
+			},
+			backgroundImage: {
+				'cyber-grid': 'linear-gradient(rgba(26, 31, 44, 0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(26, 31, 44, 0.8) 1px, transparent 1px)',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'cyber-glow': 'linear-gradient(90deg, #1EAEDB 0%, #8B5CF6 100%)',
+			},
+			backgroundSize: {
+				'cyber-grid': '20px 20px',
 			}
 		}
 	},
