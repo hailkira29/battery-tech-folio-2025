@@ -97,4 +97,70 @@
     stroke-dashoffset: 1000;
     animation: circuit-flow 8s infinite linear;
   }
+  
+  /* Cyberpunk specific animations and effects */
+  .cyber-glitch-prepare {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cyber-glitch::before,
+  .cyber-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 0, 0, 0);
+  }
+  
+  .cyber-glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #00FFFF;
+    animation: cyber-glitch-1 0.3s linear;
+  }
+  
+  .cyber-glitch::after {
+    left: -2px;
+    text-shadow: 1px 0 #FF00FF;
+    animation: cyber-glitch-2 0.3s linear;
+  }
+  
+  @keyframes cyber-glitch-1 {
+    0% { clip: rect(20px, 9999px, 76px, 0); }
+    20% { clip: rect(92px, 9999px, 33px, 0); }
+    40% { clip: rect(43px, 9999px, 11px, 0); }
+    60% { clip: rect(56px, 9999px, 97px, 0); }
+    80% { clip: rect(81px, 9999px, 69px, 0); }
+    100% { clip: rect(10px, 9999px, 43px, 0); }
+  }
+  
+  @keyframes cyber-glitch-2 {
+    0% { clip: rect(40px, 9999px, 29px, 0); }
+    20% { clip: rect(54px, 9999px, 44px, 0); }
+    40% { clip: rect(23px, 9999px, 67px, 0); }
+    60% { clip: rect(10px, 9999px, 89px, 0); }
+    80% { clip: rect(71px, 9999px, 18px, 0); }
+    100% { clip: rect(33px, 9999px, 5px, 0); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s infinite ease-in-out;
+  }
+}
+
+@keyframes text-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes circuit-flow {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
 }

@@ -6,7 +6,7 @@ import ScrollReveal from "../ScrollReveal";
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState("");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const words = ["Developer", "Engineer", "Innovator", "Battery Expert"];
+  const words = ["Developer", "Battery Engineer", "Tech Innovator", "Energy Specialist", "Circuit Designer"];
   const typingSpeed = 100;
   const erasingSpeed = 50;
   const delayBetweenWords = 1500;
@@ -54,6 +54,12 @@ const Hero: React.FC = () => {
     <section id="hero" className="relative h-screen flex flex-col justify-center items-center">
       <div className="absolute inset-0 bg-gradient-radial from-cyber-dark to-black/90 z-[-1]"></div>
       
+      {/* Cyberpunk grid overlay */}
+      <div className="absolute inset-0 bg-cyber-grid bg-cyber-grid opacity-10 z-[-1]"></div>
+      
+      {/* Glitch effect element */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-32 bg-cyber-blue/20 rounded-full blur-3xl animate-pulse-slow z-[-1]"></div>
+      
       <div className="container mx-auto px-4 text-center">
         <ScrollReveal delay={300} direction="up">
           <div className="flex items-center justify-center mb-4">
@@ -63,9 +69,12 @@ const Hero: React.FC = () => {
         </ScrollReveal>
         
         <ScrollReveal delay={500} direction="up">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 relative">
             <span className="text-white">Battery Technology</span><br />
-            <span className="text-gradient">Portfolio 2025</span>
+            <span className="text-gradient relative">
+              Portfolio 2025
+              <span className="absolute -inset-1 bg-cyber-blue/20 blur-sm rounded-lg -z-10"></span>
+            </span>
           </h1>
         </ScrollReveal>
         
@@ -82,9 +91,10 @@ const Hero: React.FC = () => {
         <ScrollReveal delay={900} direction="up">
           <button 
             onClick={scrollToNext}
-            className="mt-12 px-8 py-3 rounded-full bg-transparent cyber-border text-cyber-blue font-mono uppercase tracking-wider hover:bg-cyber-blue/10 transition-colors duration-300 interactive"
+            className="mt-12 px-8 py-3 rounded-full bg-transparent cyber-border text-cyber-blue font-mono uppercase tracking-wider hover:bg-cyber-blue/10 transition-colors duration-300 interactive group"
           >
-            Explore My Work
+            <span className="relative z-10">Explore My Work</span>
+            <span className="absolute inset-0 bg-cyber-blue/10 rounded-full scale-0 transition-transform duration-300 group-hover:scale-100"></span>
           </button>
         </ScrollReveal>
       </div>
