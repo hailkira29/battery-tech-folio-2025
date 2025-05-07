@@ -2,9 +2,20 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
+// Get repository name for GitHub Pages deployment
+// Using repository name as base for GitHub Pages
+const getBase = () => {
+  // For local development, use empty string
+  if (process.env.NODE_ENV === 'development') {
+    return '/';
+  }
+  // For production (GitHub Pages), use the repository name
+  return '/battery-tech-portfolio/';
+};
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: getBase(),
   server: {
     host: "localhost",
     port: 8080,

@@ -16,10 +16,10 @@ This will start the main portfolio at http://localhost:8080
 If the batch file doesn't work, you can manually start the application:
 
 ```
-"C:\Program Files\nodejs\node.exe" "G:\battery-tech-folio-2025\node_modules\vite\bin\vite.js" --port 8080 --host localhost
+"C:\Program Files\nodejs\node.exe" ".\node_modules\vite\bin\vite.js" --port 8080 --host localhost
 ```
 
-(Replace G:\battery-tech-folio-2025 with your actual workspace path)
+(Use the current directory path to the vite.js file)
 
 ## Project Structure
 
@@ -41,6 +41,58 @@ This portfolio has been optimized for performance:
 - Reduced dependency footprint by removing unused libraries
 - Configured Vite for faster builds with manual chunking
 - Setup for production with console log removal
+
+## GitHub Pages Deployment
+
+To deploy this portfolio to GitHub Pages:
+
+1. Build the production version:
+```
+npm run build
+```
+
+2. The output will be in the `dist` directory.
+
+3. Configure GitHub Pages:
+   - Go to your repository settings on GitHub
+   - Navigate to "Pages" section
+   - Select the branch to deploy (usually main or gh-pages)
+   - Set the folder to `/dist`
+   - Click "Save"
+
+4. Alternatively, you can use GitHub Actions for automatic deployment:
+   - Create a `.github/workflows/deploy.yml` file with the following content:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+```
 
 ## Troubleshooting
 
