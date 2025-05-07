@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# Battery Tech Portfolio
 
-## Project info
+This repository contains the Battery Tech Portfolio website showcasing my skills and projects in battery technology.
 
-**URL**: https://lovable.dev/projects/6434abae-bebb-4c36-a8a7-8b307029ad15
+## Running the Application
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6434abae-bebb-4c36-a8a7-8b307029ad15) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Starting the Portfolio
+To start the portfolio site:
+```
+run-portfolio.bat
 ```
 
-**Edit a file directly in GitHub**
+This will start the main portfolio at http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Manual Start
+If the batch file doesn't work, you can manually start the application:
 
-**Use GitHub Codespaces**
+```
+"C:\Program Files\nodejs\node.exe" "G:\battery-tech-folio-2025\node_modules\vite\bin\vite.js" --port 8080 --host localhost
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+(Replace G:\battery-tech-folio-2025 with your actual workspace path)
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
+- `/` - Main portfolio website
+- `/public` - Static files
+- `/src` - Source code
 
-- Vite
-- TypeScript
+## Technologies Used
+
 - React
-- shadcn-ui
-- Tailwind CSS
+- TypeScript
+- Node.js
+- Vite (for development server)
+- TailwindCSS (for styling)
 
-## How can I deploy this project?
+## Optimization
 
-Simply open [Lovable](https://lovable.dev/projects/6434abae-bebb-4c36-a8a7-8b307029ad15) and click on Share -> Publish.
+This portfolio has been optimized for performance:
+- Reduced dependency footprint by removing unused libraries
+- Configured Vite for faster builds with manual chunking
+- Setup for production with console log removal
 
-## Can I connect a custom domain to my Lovable project?
+## Troubleshooting
 
-Yes, you can!
+If you encounter issues:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Make sure Node.js is installed and properly configured
+2. Check that the path to Node.js in run-portfolio.bat matches your actual Node.js installation
+3. If the batch file doesn't work, try the manual start command
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
