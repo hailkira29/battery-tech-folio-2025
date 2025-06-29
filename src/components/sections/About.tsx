@@ -1,4 +1,3 @@
-
 import React from "react";
 import ScrollReveal from "../ScrollReveal";
 import { BatteryCharging, Cpu, Code, Terminal, Database, GitBranch } from "lucide-react";
@@ -18,8 +17,8 @@ const About: React.FC = () => {
               <div className="relative overflow-hidden rounded-lg aspect-square">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/20 to-cyber-purple/20 z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Profile"
+                  src="/Personal Photo.png"
+                  alt="Hemant Hedaoo - Battery Technology Specialist"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-0 left-0 w-full h-8 bg-cyber-dark/80 backdrop-blur-sm flex items-center px-3 space-x-1.5">
